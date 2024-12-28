@@ -1,0 +1,147 @@
+[
+    {
+        "customer_id": 1,
+        "customer_name": "Client One",
+        "users": [
+            {
+                "user_id": 1,
+                "email": "tl@conversional.de",
+                "created": "2021-01-01",
+                "sessions": [
+                    {
+                        "activated": null,
+                        "appointment": "2021-01-22"
+                    }
+                ]
+            },
+            {
+                "user_id": 2,
+                "email": "ch@conversional.de",
+                "created": "2021-01-01",
+                "sessions": [
+                    {
+                        "activated": "2021-01-01",
+                        "appointment": "2021-01-01"
+                    },
+                    {
+                        "activated": "2021-02-01",
+                        "appointment": null
+                    }
+                ]
+            },
+            {
+                "user_id": 4,
+                "email": "anton.steiger@web.de",
+                "created": "2021-01-15",
+                "sessions": [
+                    {
+                        "activated": "2021-01-15",
+                        "appointment": null
+                    },
+                    {
+                        "activated": "2021-01-16",
+                        "appointment": null
+                    },
+                    {
+                        "activated": "2021-03-01",
+                        "appointment": "2021-01-30"
+                    },
+                    {
+                        "activated": null,
+                        "appointment": "2021-01-30"
+                    }
+                ]
+            },
+            {
+                "user_id": 8,
+                "email": "billing@conversional.de",
+                "created": "2021-03-03",
+                "sessions": [
+                    {
+                        "activated": "2021-03-03",
+                        "appointment": "2021-03-03"
+                    }
+                ]
+            },
+            {
+                "user_id": 9,
+                "email": "admin@conversional.de",
+                "created": "2020-12-22",
+                "sessions": [
+                    {
+                        "activated": null,
+                        "appointment": "2020-12-22"
+                    }
+                ]
+            },
+            {
+                "user_id": 10,
+                "email": "bonjour@conversional.fr",
+                "created": "2020-12-1",
+                "sessions": [
+                    {
+                        "activated": "2020-12-01",
+                        "appointment": null
+                    },
+                    {
+                        "activated": "2020-12-02",
+                        "appointment": null
+                    },
+                    {
+                        "activated": "2020-12-03",
+                        "appointment": null
+                    },
+                    {
+                        "activated": null,
+                        "appointment": "2021-01-04"
+                    }
+                ]
+            }
+
+        ]
+    },
+    {
+        "customer_id": 2,
+        "customer_name": "Client Two",
+        "users": [
+            {
+                "user_id": 3,
+                "email": "test@conversional.de",
+                "created": "2021-01-01",
+                "sessions": [
+                    {
+                        "activated": "2021-01-01",
+                        "appointment": null
+                    }
+                ]
+            },
+            {
+                "user_id": 5,
+                "email": "user@test.de",
+                "created": "2021-04-01",
+                "sessions": [
+                    {
+                        "activated": null,
+                        "appointment": "2021-04-01"
+                    },
+                    {
+                        "activated": "2021-04-01",
+                        "appointment": null
+                    }
+                ]
+            },
+            {
+                "user_id": 6,
+                "email": "hallo@conversional.de",
+                "created": "2021-05-01",
+                "sessions": []
+            },
+            {
+                "user_id": 7,
+                "email": "support@conversional.de",
+                "created": "2019-01-01",
+                "sessions": []
+            }
+        ]
+    }
+]

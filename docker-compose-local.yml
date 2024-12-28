@@ -1,0 +1,53 @@
+networks:
+    conversional_task_network:
+        name: conversional_task_network
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.local
+        container_name: conversional_task_web
+        networks:
+            - conversional_task_network
+        restart: always
+        links:
+            - postgres
+        depends_on:
+            - postgres
+        volumes:
+            - ./:/var/www/html
+        ports:
+            - "127.0.0.1:2025:80"
+
+    postgres:
+        image: postgres:16.3
+        container_name: conversional_task_postgres
+        networks:
+            - conversional_task_network
+        restart: always
+        environment:
+            POSTGRES_DB: conversional_task
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+            PGDATA: /var/lib/postgresql/data
+        volumes:
+            - ./docker/data/postgres-storage/:/var/lib/postgresql/data
+
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: conversional_task_pgadmin
+        networks:
+            - conversional_task_network
+        links:
+            - postgres
+        depends_on:
+            - postgres
+        environment:
+            PGADMIN_DEFAULT_EMAIL: hamid.dev.pro@gmail.com
+            PGADMIN_DEFAULT_PASSWORD: root
+        volumes:
+            - ./docker/data/pgadmin-storage/:/var/lib/pgadmin
+        restart: on-failure
+        ports:
+            - "127.0.0.1:2026:80"

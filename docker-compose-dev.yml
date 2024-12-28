@@ -1,0 +1,31 @@
+networks:
+    conversional_task_network:
+        name: conversional_task_network
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        container_name: conversional_task_web
+        networks:
+            - conversional_task_network
+        restart: always
+        links:
+            - postgres
+        depends_on:
+            - postgres
+        ports:
+            - "127.0.0.1:2025:80"
+
+    postgres:
+        image: postgres:16.3
+        container_name: conversional_task_postgres
+        networks:
+            - conversional_task_network
+        restart: always
+        environment:
+            POSTGRES_DB: conversional_task
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+            PGDATA: /var/lib/postgresql/data
