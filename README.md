@@ -56,10 +56,10 @@ A live version of this application is available at:
 
 ## Tools and Features
 
-- **Larastan (PHPStan)**
-- **Pest (Unit and feature tests)**
-- **Pest Type Coverage**
-- **Pint (PHP CS Fixer)**
+- **Larastan (PHPStan)**: Run `./vendor/bin/phpstan analyse` command
+- **Pest (Unit and feature tests)**: Run `php artisan test` command
+- **Pest Type Coverage**: Run `./vendor/bin/pest --type-coverage --min=100` command
+- **Pint (PHP CS Fixer)**: Run `./vendor/bin/pint --test` command
 - **GitHub Actions**:
     - Automated CI/CD workflows for running tests, code style check and static analysis.
     - These workflows can be viewed in the **Actions** page of the repository.
