@@ -71,7 +71,7 @@ A live version of this application is available at:
 - **Rate limiting** is configured through Laravel to control and limit API request traffic.
 - **Factories** are created for all models to facilitate testing and seeding.
 - **Mock data** is stored in the following file:
-`./database/seeders/data/mock.json`, The database is populated with this mock data using the `MockDataSeeder` class, which is automatically executed in the Docker setup.
+`./database/seeders/data/mock.json`, The database is populated with this mock data using the `MockDataSeeder` class, which is automatically executed in the Docker setup. I used the sample data excel file that was attached in the email.
 ---- 
 - When creating an **invoice** for a specified period (e.g., `2021-01-01` to `2021-02-01`), any sessions or registrations from earlier periods **that have not been invoiced** are **not included** in the current invoice calculations. **Uninvoiced sessions and registrations** from **earlier periods** are not considered and do not affect the calculations for the current invoicing period. To include earlier sessions or registrations in the current period's invoice calculations, they must first be invoiced before creating the new invoice.
 - The frequency of events occurring within a period is calculated based on session activations, appointments, and user creation fields. Duplicate and non-invoiced events (eg: cheaper events) are included in these counts, which can be viewed through the `GET /invoice` API.
